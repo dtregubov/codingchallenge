@@ -1,0 +1,9 @@
+# Python artefacts
+*.pyc
+__pycache__
+
+# MacOS artefacts
+.DS_Store
+
+# IDE artefacts
+.idea/
