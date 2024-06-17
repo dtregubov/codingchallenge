@@ -5,12 +5,13 @@ from flask import Flask, jsonify, request
 
 from src.data_utils import create_indices, create_tensors, download_data, read_data
 from src.model import BoW
-from src.train import perform_inference, train_bow
+from src.train import train_bow
+from src.inference import perform_inference
 
 app = Flask(__name__)
 
 
-iterations_to_train = 2
+iterations_to_train = 10
 
 # choose device and tensor
 if torch.cuda.is_available():
