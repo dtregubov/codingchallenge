@@ -9,7 +9,7 @@ from src.model import BoW
 
 
 class DataProcessor:
-    iterations_to_train: int = 2
+    iterations_to_train: int = 10
     cuda_available: bool = torch.cuda.is_available()
 
     def __init__(self, train_file, test_file):
