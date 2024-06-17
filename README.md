@@ -3,6 +3,7 @@ Coding Challenge is a production-ready Python project
 which was built from notebook 'assigment1.ipynb' with BoW model for Text Classification.
 The project is ready to run as Docker-based application.
 
+Datasets will be downloaded from existed URLs.
 ## Deploying (using Docker Compose)
 
 The Makefile is used for convenience with docker-compose. You can do the following by it:
