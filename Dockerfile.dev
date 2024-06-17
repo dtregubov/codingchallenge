@@ -20,4 +20,4 @@ COPY . /codingchallenge/
 EXPOSE 8000
 
 # Run the main.py script
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]

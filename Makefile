@@ -9,8 +9,5 @@ run:
 rund:
 	docker-compose up --build -d
 
-bash:
-	docker-compose exec app /bin/bash
-
 isort:
 	docker-compose exec app isort -l120 -m3 --tc $(if $(ISORT_PATH),$(ISORT_PATH), .)
