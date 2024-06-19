@@ -5,7 +5,7 @@ from src.model import BoW
 
 @pytest.fixture(scope='module')
 def data_processor():
-    data_processor = DataProcessor('test_data/train.txt', 'test_data/test.txt')
+    data_processor = DataProcessor('tests/test_data/train.txt', 'tests/test_data/test.txt')
     data_processor.train(iterations=1)
     return data_processor
 

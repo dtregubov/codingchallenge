@@ -11,3 +11,6 @@ rund:
 
 isort:
 	docker-compose exec app isort -l120 -m3 --tc $(if $(ISORT_PATH),$(ISORT_PATH), .)
+
+test:
+	docker-compose run --rm app pytest

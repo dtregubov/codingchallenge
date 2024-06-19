@@ -37,3 +37,12 @@ curl -X POST -H "Content-Type: application/json" -d '{"sentence": "I love progra
 2) Open terminal and write 'cd path_to_app' command
 3) Run 'make rund' command
 4) Write ``` curl -X POST -H "Content-Type: application/json" -d '{"sentence": "I love programming"}' http://0.0.0.0:8000/predict ``` command
+
+
+## Testing
+Tests were written using Pytest and can be called together fo the project.
+To run tests, use command:
+
+```bash
+make test
+```
