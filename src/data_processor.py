@@ -40,11 +40,11 @@ class DataProcessor:
         return model, word_to_index, tag_to_index
 
     # Perform training and testing of BoW model.
-    def train(self) -> None:
+    def train(self, iterations: int = iterations_to_train) -> None:
         # Make sure the model is on the correct device
         self.model.to(self.device)
 
-        for iteration in range(self.iterations_to_train):
+        for iteration in range(iterations):
             # perform training of the model
             self.model.train()
             random.shuffle(self.train_tensors)
