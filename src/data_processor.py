@@ -55,7 +55,7 @@ class DataProcessor:
                 sentence = torch.tensor(sentence).type(self.tensor_type).to(self.device)
                 tag = torch.tensor([tag]).type(self.tensor_type).to(self.device)
                 output = self.model(sentence)
-                predicted = torch.argmax(output.data.detach()).item()
+                predicted = torch.argmax(output.data).item()
                 loss = self.criterion(output, tag)
                 total_loss += loss.item()
                 self.optimizer.zero_grad()
@@ -93,8 +93,8 @@ class DataProcessor:
         sentence_tensor = sentence_tensor.to(self.device)
 
         # Make sure the model is in evaluation mode and on the correct device
-        self.model.eval()
         self.model.to(self.device)
+        self.model.eval()
 
         # Perform inference
         with torch.no_grad():

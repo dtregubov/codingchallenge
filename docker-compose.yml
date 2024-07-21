@@ -1,5 +1,3 @@
-version: '3.10'
-
 services:
   app:
     build:
@@ -8,9 +6,12 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - .:/codingchallenge
+      - db-data:/codingchallenge
     environment:
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
       - FLASK_APP=app.py
     command: flask run --host=0.0.0.0 --port=8000
+
+volumes:
+  db-data:
